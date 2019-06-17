@@ -7,17 +7,29 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
-  provider:
+  flutter_web: any
+  flutter_web_ui: any
+  provider: any
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
+  flutter_web_test: any
 
 dependency_overrides:
+  flutter_web:
+    git:
+      url: https://github.com/flutter/flutter_web
+      path: packages/flutter_web
+  flutter_web_ui:
+    git:
+      url: https://github.com/flutter/flutter_web
+      path: packages/flutter_web_ui
+  flutter_web_test:
+    git:
+      url: https://github.com/flutter/flutter_web
+      path: packages/flutter_web_test
   provider:
-    path: ../
-
-flutter:
-  uses-material-design: true
+    git:
+      url: https://github.com/AppleEducate/provider
+      path: packages/provider
+      ref: web
+      

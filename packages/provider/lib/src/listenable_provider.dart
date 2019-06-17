@@ -1,5 +1,5 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter_web/foundation.dart';
+import 'package:flutter_web/widgets.dart';
 
 import 'change_notifier_provider.dart' show ChangeNotifierProvider;
 import 'delegate_widget.dart';
@@ -51,7 +51,6 @@ class ListenableProvider<T extends Listenable> extends ValueDelegateWidget<T>
   ListenableProvider._({
     Key key,
     @required _ListenableDelegateMixin<T> delegate,
-    // TODO: updateShouldNotify for when the listenable instance change with `.value` constructor
     this.child,
   }) : super(
           key: key,
